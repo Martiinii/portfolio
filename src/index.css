@@ -21,5 +21,19 @@
 }
  
 body {
-    @apply bg-gradient-to-br bg-fixed from-stone-200 to-stone-300;
+    @apply bg-gradient-to-br bg-fixed from-stone-100 to-stone-200 md:pr-48 text-neutral-800;
+}
+
+section {
+    @apply p-5;
+}
+
+.fancy-text {
+    @apply font-display bg-gradient-to-r from-sky-500 to-pink-500 bg-clip-text text-transparent drop-shadow-md;
+}
+
+@layer base {
+    .btn {
+        @apply font-semibold rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-offset-4 shadow-md shadow-slate-700/30 transition-all duration-300;
+    }
 }
