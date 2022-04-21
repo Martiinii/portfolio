@@ -38,14 +38,15 @@ const Navbar = () => {
 
 const Logo = () => {
     return (
-        <button
+        <a
             className="rounded-full shadow-zinc-500 shadow-md overflow-hidden flex w-20"
+            href="/#"
         >
             <img
                 src="/logo.png"
                 alt="Logo"
             />
-        </button>
+        </a>
     );
 }
 
@@ -62,7 +63,6 @@ const NavContainer = ({ children, visibility }) => {
 }
 
 const NavItem = ({ href, value }) => {
-
     return (
         <li>
             <a
