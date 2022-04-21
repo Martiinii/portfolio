@@ -1,21 +1,27 @@
+import H2 from "./components/H2";
+import MainHeader from "./components/MainHeader";
 import Navbar from "./components/Navbar";
-import { ShowWhenVisible, visibleVariants } from "./components/ShowWhenVisible";
+import ScrollDownArrow from "./components/ScrollDownArrow";
+import TechGroup from "./components/TechGroup";
 
 function App() {
   return (
-    <>
-      <main>
-        <Navbar />
-        <header className="ml-10 md:ml-20 lg:ml-40 mt-40 text-6xl font-medium">
-          <ShowWhenVisible variants={visibleVariants.slideDown(50)} delay={.3}>
-            <h1 className="mb-10">I'm <span className="fancy-text">Martin</span>,<br />Web developer.</h1>
-            <ShowWhenVisible variants={visibleVariants.slideUp(50)} delay={1.1}>
-              <p className="font-normal text-xl">Front End / Back End</p>
-            </ShowWhenVisible>
-          </ShowWhenVisible>
-        </header>
-      </main>
-    </>
+    <main>
+      <Navbar />
+      <section className="bg-primary min-h-screen pt-40 flex flex-col gap-20 justify-between">
+        <MainHeader />
+        <ScrollDownArrow />
+      </section>
+
+      <section className="bg-secondary min-h-screen">
+        <H2>Technologies I use</H2>
+        <div className="grid grid-cols-3 gap-5 max-w-4xl mx-auto">
+          <TechGroup title="Front end" />
+          <TechGroup title="Back end" />
+          <TechGroup title="Others"/>
+        </div>
+      </section>
+    </main>
   );
 }
 
