@@ -6,22 +6,22 @@
     @apply w-4 h-4;
 }
 * ::-webkit-scrollbar-track {
-    @apply bg-sky-900;
+    @apply bg-neutral-400;
 }
 * ::-webkit-scrollbar-track:horizontal {
     @apply rounded-full;
 }
 
 * ::-webkit-scrollbar-thumb {
-    @apply bg-sky-100 rounded-full border-4 border-solid border-transparent bg-clip-content;
+    @apply bg-neutral-200 rounded-full border-4 border-solid border-transparent bg-clip-content;
 }
 
 * ::-webkit-scrollbar-thumb:hover {
-    @apply bg-slate-400;
+    @apply bg-neutral-50;
 }
  
-body {
-    @apply bg-gradient-to-br bg-fixed from-stone-100 to-stone-200 md:pr-48 text-neutral-800;
+main {
+    @apply md:pr-48;
 }
 
 section {
@@ -33,7 +33,22 @@ section {
 }
 
 @layer base {
+    .bg-primary {
+        @apply bg-gradient-to-br from-stone-100 to-stone-200 text-neutral-800;
+    }
+
+    .bg-secondary {
+        @apply bg-gradient-to-br from-stone-200 to-stone-300 text-neutral-900;
+    }
+
     .btn {
         @apply font-semibold rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-offset-4 shadow-md shadow-slate-700/30 transition-all duration-300;
+    }
+
+    .header {
+        @apply w-full font-medium text-4xl;
+    }
+    .header-c {
+        @apply text-center my-10 px-5;
     }
 }
