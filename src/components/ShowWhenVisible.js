@@ -1,6 +1,6 @@
 import { motion } from "framer-motion"
 
-const ShowWhenVisible = ({ children, variants, duration, delay }) => {
+const ShowWhenVisible = ({ children, variants, duration, delay, className }) => {
     return (
         <motion.div
             initial="hidden"
@@ -12,6 +12,7 @@ const ShowWhenVisible = ({ children, variants, duration, delay }) => {
                 hidden: { opacity: 0, scale: .5 }
             }}
             layout
+            className={className ?? ""}
         >
             {children}
         </motion.div>
