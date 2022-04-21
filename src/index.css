@@ -20,6 +20,10 @@
     @apply bg-neutral-50;
 }
  
+html {
+    @apply motion-safe:scroll-smooth;
+}
+
 main {
     @apply md:pr-48;
 }
