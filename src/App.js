@@ -15,7 +15,8 @@ function App() {
 
       <section className="bg-secondary min-h-screen">
         <H2>Technologies I use</H2>
-        <div className="grid grid-cols-3 gap-5 max-w-4xl mx-auto">
+
+        <div className="grid grid-cols-1 gap-20 xs:grid-cols-3 xs:gap-5 max-w-4xl mx-auto w-fit">
           <TechGroup title="Front end" />
           <TechGroup title="Back end" />
           <TechGroup title="Others"/>

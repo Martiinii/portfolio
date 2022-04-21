@@ -25,7 +25,7 @@ const LevelDot = ({ level }) => {
 const SkillTag = (value, level) => {
     return (
         <motion.div
-            className="flex gap-2 items-center uppercase font-mono text-sm font-semibold bg-zinc-300 text-neutral-700 px-2 py-1 rounded-lg"
+            className="flex gap-2 items-center uppercase font-mono font-semibold bg-zinc-300 text-neutral-700 px-2 py-1 rounded-lg"
             whileHover={{y: 5}}
             layout
         >

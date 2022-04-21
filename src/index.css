@@ -46,7 +46,7 @@ section {
     }
 
     .header {
-        @apply w-full font-medium text-4xl;
+        @apply w-full font-medium text-3xl xs:text-4xl;
     }
     .header-c {
         @apply text-center my-10 px-5;
