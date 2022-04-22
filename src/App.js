@@ -16,7 +16,11 @@ function App() {
         <ScrollDownArrow />
       </section>
 
-      <section className="bg-secondary min-h-screen" id="skills">
+      <section className="bg-secondary min-h-screen" id="about">
+        
+      </section>
+
+      <section className="bg-primary min-h-screen" id="skills">
         <ShowWhenVisible variants={visibleVariants.slideDown(50)} delay={.5}>
           <H2>Technologies I use</H2>
         </ShowWhenVisible>
