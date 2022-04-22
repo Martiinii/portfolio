@@ -29,7 +29,7 @@ main {
 }
 
 section {
-    @apply p-5; 
+    @apply p-5;
 }
 
 
@@ -60,5 +60,10 @@ section {
 
     .header-c {
         @apply text-center my-10 px-5;
+    }
+
+    .header-st {
+        @apply relative font-medium text-xl lg:text-3xl bg-white/40 backdrop-blur-sm inline-block py-4 px-7 shadow-lg shadow-neutral-600/30 transition-shadow hover:shadow-pink-600 hover:shadow-nooffset;
+        border-radius: 50px 15px;
     }
 }

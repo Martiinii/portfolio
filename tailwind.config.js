@@ -10,6 +10,9 @@ module.exports = {
         'sans': "Montserrat",
         'display': 'Fredoka One'
       },
+      boxShadow: {
+        'nooffset': '0 0 4px 0 rgb(0 0 0 / 0.1), 0 0 8px -3px rgb(0 0 0  / 0.1)'
+      }
     },
 
     screens: {
