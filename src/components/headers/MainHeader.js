@@ -16,7 +16,7 @@ const MainHeader = () => {
             <ShowWhenVisible variants={visibleVariants.slideDown(50)} delay={.3}>
                 <h1 className="mb-10" >I'm <motion.span className="fancy-text" variants={variants} whileHover="animate" whileTap="animate" >Martin</motion.span>,<br />Web developer.</h1>
 
-                <ShowWhenVisible variants={visibleVariants.slideUp(50)} delay={1.1}>
+                <ShowWhenVisible variants={visibleVariants.slideUp(50)} delay={1.1} className="flex">
 
                     <SmallText variants={LeftVariant(1.1)} className="z-20">Front-End</SmallText>
                     <SmallText variants={RightVariant(1.1)} className="z-10">Back-End</SmallText>
