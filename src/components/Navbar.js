@@ -24,7 +24,7 @@ const Navbar = () => {
             ? ""
             : "-translate-y-full md:translate-y-0";
 
-            if(newStyle == style) return;
+            if(newStyle === style) return;
             setStyle(newStyle);
     });
 
