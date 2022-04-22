@@ -1,4 +1,4 @@
-import { ShowWhenVisible, visibleVariants } from "./ShowWhenVisible";
+import { ShowWhenVisible, visibleVariants } from "../ShowWhenVisible";
 
 const MainHeader = () => {
     return (

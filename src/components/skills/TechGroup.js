@@ -1,4 +1,4 @@
-import Breaker from "./Breaker"
+import Breaker from "../Breaker"
 import { BootstrapSkillTag, CPPSkillTag, CSSSkillTag, ExpressSkillTag, FigmaSkillTag, FirebaseSkillTag, FramerMotionSkillTag, GatsbySkillTag, GitSkillTag, JavaSkillTag, JSSkillTag, MariaDBSkillTag, MongoDBSkillTag, NextSkillTag, NodeSkillTag, PHPSkillTag, PythonSkillTag, ReactSkillTag, SQLSkillTag, SvelteSkillTag, TailwindSkillTag, ThreeSkillTag } from "./SkillTag"
 
 const TechGroup = ({ title, children }) => {

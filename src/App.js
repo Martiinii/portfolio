@@ -1,11 +1,11 @@
 import Breaker from "./components/Breaker";
-import H2 from "./components/H2";
-import LegendItem from "./components/LegendItem";
-import MainHeader from "./components/MainHeader";
+import H2 from "./components/headers/H2";
+import LegendItem from "./components/skills/LegendItem";
+import MainHeader from "./components/headers/MainHeader";
 import Navbar from "./components/Navbar";
-import ScrollDownArrow from "./components/ScrollDownArrow";
+import ScrollDownArrow from "./components/headers/ScrollDownArrow";
 import { ShowWhenVisible, visibleVariants } from "./components/ShowWhenVisible";
-import TechGroups from "./components/TechGroups";
+import TechGroups from "./components/skills/TechGroups";
 
 function App() {
   return (
