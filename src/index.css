@@ -29,11 +29,12 @@ main {
 }
 
 section {
-    @apply p-5;
+    @apply p-5; 
 }
 
+
 .fancy-text {
-    @apply font-display bg-gradient-to-r from-sky-500 to-pink-500 bg-clip-text text-transparent drop-shadow-md;
+    @apply font-display bg-gradient-to-r from-cyan-500 to-sky-700 bg-clip-text text-transparent drop-shadow-md;
 }
 
 @layer base {
@@ -45,6 +46,10 @@ section {
         @apply bg-gradient-to-br from-stone-200 to-stone-300 text-neutral-900;
     }
 
+    .navbar {
+        @apply bg-white px-4 py-3 fixed z-10 rounded-b-lg md:rounded-none w-full md:h-screen md:py-10 top-0 md:right-0 md:w-48 md:overflow-auto transition-transform duration-300 delay-100;
+    }
+
     .btn {
         @apply font-semibold rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-offset-4 shadow-md shadow-slate-700/30 transition-all duration-300;
     }
@@ -52,6 +57,7 @@ section {
     .header {
         @apply w-full font-medium text-3xl xs:text-4xl;
     }
+
     .header-c {
         @apply text-center my-10 px-5;
     }
