@@ -1,11 +1,12 @@
 import { faBars } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useScrollPosition } from "@n8tb1t/use-scroll-position";
 import { useState } from "react";
 
 const Navbar = () => {
     const [mobileMenuVisible, setMobileMenuVisible] = useState(false);
-    const toggleVisibility = () => {
-        setMobileMenuVisible(!mobileMenuVisible);
+    const toggleVisibility = (state = null) => {
+        setMobileMenuVisible(state ?? !mobileMenuVisible);
     }
 
     const links = [
@@ -14,9 +15,22 @@ const Navbar = () => {
         { href: '/#work', value: 'My work' },
     ];
 
+    const [style, setStyle] = useState("");
+
+    useScrollPosition(({ prevPos, currPos }) => {
+        const isVisible = currPos.y > prevPos.y;
+
+        const newStyle = isVisible
+            ? ""
+            : "-translate-y-full md:translate-y-0";
+
+            if(newStyle == style) return;
+            setStyle(newStyle);
+    });
+
     return (
         <nav
-            className="bg-white px-4 py-3 rounded-b-lg md:rounded-none md:h-screen md:py-10 md:fixed md:top-0 md:right-0 md:w-48 md:overflow-auto"
+            className={`navbar ${style}`}
         >
             <div
                 className="container text-slate-600 flex flex-wrap md:flex-col md:min-h-full md:gap-12 justify-between items-center mx-auto sm:text-xl"
@@ -24,12 +38,12 @@ const Navbar = () => {
                 <Logo />
                 <button
                     className="btn md:hidden p-3 focus:ring-gray-300 hover:bg-slate-100 flex shadow-none"
-                    onClick={toggleVisibility}
+                    onClick={() => { toggleVisibility() }}
                 >
                     <FontAwesomeIcon icon={faBars} />
                 </button>
                 <NavContainer visibility={mobileMenuVisible}>
-                    {links.map(link => <NavItem {...link} key={link.value} />)}
+                    {links.map(link => <NavItem {...link} key={link.value} onClick={() => { toggleVisibility(false) }} />)}
                 </NavContainer>
             </div>
         </nav>
@@ -62,12 +76,13 @@ const NavContainer = ({ children, visibility }) => {
     )
 }
 
-const NavItem = ({ href, value }) => {
+const NavItem = ({ href, value, onClick }) => {
     return (
         <li>
             <a
                 className="btn shadow-none block py-2 px-4 text-slate-600 bg-transparent md:p-3 font-bold focus:ring-sky-600 hover:bg-slate-100"
                 href={href}
+                onClick={onClick}
             >
                 {value}
             </a>
