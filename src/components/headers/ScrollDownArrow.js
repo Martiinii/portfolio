@@ -10,7 +10,7 @@ const ScrollDownArrow = () => {
       animate={{ opacity: 1 }}
       transition={{ delay: 2, duration: 2 }}
     >
-      <span className="text-xl">Scroll to discover</span>
+      <span className="text-xl md:text-3xl">Scroll to discover</span>
       <motion.div
         animate={{ y: [-5, 5, -5], color: ['#525252', '#262626', '#525252'] }}
         transition={{ repeat: Infinity, delay: 2, duration: 2 }}

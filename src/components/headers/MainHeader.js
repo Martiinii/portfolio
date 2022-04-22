@@ -18,7 +18,7 @@ const MainHeader = () => {
 
                 <ShowWhenVisible variants={visibleVariants.slideUp(50)} delay={1.1}>
 
-                    <SmallText variants={LeftVariant(1.1)} className="z-50">Front-End</SmallText>
+                    <SmallText variants={LeftVariant(1.1)} className="z-20">Front-End</SmallText>
                     <SmallText variants={RightVariant(1.1)} className="z-10">Back-End</SmallText>
 
                 </ShowWhenVisible>

@@ -47,7 +47,7 @@ section {
     }
 
     .navbar {
-        @apply bg-white px-4 py-3 fixed z-10 rounded-b-lg md:rounded-none w-full md:h-screen md:py-10 top-0 md:right-0 md:w-48 md:overflow-auto transition-transform duration-300 delay-100;
+        @apply bg-white px-4 py-3 fixed z-50 rounded-b-lg md:rounded-none w-full md:h-screen md:py-10 top-0 md:right-0 md:w-48 md:overflow-auto transition-transform duration-300 delay-100;
     }
 
     .btn {
