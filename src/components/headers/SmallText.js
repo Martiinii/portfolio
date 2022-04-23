@@ -22,7 +22,6 @@ const LeftVariant = (delay) => {
         initial: {
             x: "-200%",
             y: "-25%",
-            
         },
         animate: {
             x: 0,
@@ -47,7 +46,6 @@ const RightVariant = (delay) => {
         initial: {
             x: "200%",
             y: "25%",
-
         },
         animate: {
             x: -36,
