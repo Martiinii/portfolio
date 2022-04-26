@@ -1,4 +1,4 @@
-import { faAngleLeft, faAngleRight, faCircleNotch } from "@fortawesome/free-solid-svg-icons";
+import { faAngleLeft, faAngleRight } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AnimatePresence, motion } from "framer-motion"
 import { useState } from "react"
