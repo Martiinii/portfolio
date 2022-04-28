@@ -35,10 +35,10 @@ const variants = {
     }
 }
 
-const ImageSlider = ({ path, data }) => {
+const ImageSlider = ({ path, images, className = "max-w-3xl" }) => {
     const [[page, direction], setPage] = useState([0, 0]);
 
-    const currentIndex = wrap(0, data.length, page);
+    const currentIndex = wrap(0, images.length, page);
 
     const changePage = newDir => {
         setPage([page + newDir, newDir]);
@@ -46,7 +46,7 @@ const ImageSlider = ({ path, data }) => {
 
 
     return (
-        <div className="flex justify-center items-center relative overflow-hidden bg-white shadow-lg shadow-neutral-700/50 max-w-3xl aspect-video rounded-xl">
+        <div className={`flex items-center relative overflow-hidden bg-white shadow-lg shadow-neutral-700/50 aspect-video rounded-xl w-full ${className}`}>
             <AnimatePresence
                 initial={false}
                 custom={direction}
@@ -55,7 +55,7 @@ const ImageSlider = ({ path, data }) => {
                     className="absolute object-cover h-full w-full object-center rounded-xl"
 
                     key={page}
-                    src={path + data[currentIndex]}
+                    src={path + images[currentIndex]}
                     custom={direction}
                     variants={variants}
                     initial="initial"
