@@ -68,7 +68,7 @@ section > article p {
     }
 
     .slider-btn {
-        @apply absolute z-10 font-semibold rounded-full flex justify-center items-center aspect-square bg-white hover:bg-neutral-200 w-10 hover:scale-110 transition-all duration-300;
+        @apply absolute z-10 font-semibold rounded-full flex justify-center items-center aspect-square bg-neutral-100 hover:bg-neutral-200 w-10 hover:scale-110 transition-all duration-300;
     }
 
     .header {
