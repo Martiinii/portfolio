@@ -8,6 +8,7 @@ import { ShowWhenVisible, visibleVariants } from "./components/ShowWhenVisible";
 import TechGroups from "./components/skills/TechGroups";
 import FancyText from "./components/about/FancyText";
 import WavyText from "./components/about/WavyText";
+import { WOMProject } from "./components/work/ProjectInformation"
 
 function App() {
   return (
@@ -20,9 +21,9 @@ function App() {
 
       <section className="bg-secondary min-h-screen" id="about">
         <H2>About me</H2>
-        <article className="max-w-4xl text-lg">
+        <article className="max-w-4xl text-lg mx-auto">
           <ShowWhenVisible delay={.5} variants={visibleVariants.slideRight("100%")} type="spring" duration={1.5}>
-            <p>I am a Full-Stack Web Developer from Poland. <span className="whitespace-nowrap">I mainly</span> do the Front-End, less often the Back-End. <span className="whitespace-nowrap">I love</span> minimalist and modern websites.</p>
+            <p>I&nbsp;am a Full-Stack Web Developer from Poland. I&nbsp;mainly do the Front-End, less often the Back-End. I&nbsp;love minimalist and modern websites.</p>
           </ShowWhenVisible>
 
           <ShowWhenVisible delay={.8} variants={visibleVariants.slideRight("100%")} type="spring" duration={1.5}>
@@ -31,8 +32,8 @@ function App() {
           </ShowWhenVisible>
 
           <ShowWhenVisible delay={1.1} variants={visibleVariants.slideRight("100%")} type="spring" duration={1.5}>
-            <p>I am eager to learn new technologies and <span className="whitespace-nowrap">I willingly</span> study new topics that interest me. <span className="whitespace-nowrap">I can</span> spend hours upon new things, thoroughly analyzing how they work under the hood. <span className="whitespace-nowrap">I pay</span> a lot of attention to optimizing and organizing the code.</p>
-            <p>My interests are astronomy, rockets, astrophotography and Rubik’s cubes.</p>
+            <p>I&nbsp;am eager to learn new technologies and I&nbsp;willingly study new topics that interest me. I&nbsp;can spend hours upon new things, thoroughly analyzing how they work under the hood. I&nbsp;pay a lot of attention to optimizing and organizing the code.</p>
+            <p>My interests are astronomy, rockets, astrophotography and Rubik's cubes.</p>
           </ShowWhenVisible>
         </article>
       </section>
@@ -54,6 +55,11 @@ function App() {
 
         </ShowWhenVisible>
 
+      </section>
+
+      <section className="bg-secondary min-h-screen" id="work">
+        <H2>My projects</H2>
+        <WOMProject />
       </section>
     </main>
   );
