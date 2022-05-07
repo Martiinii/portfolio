@@ -46,7 +46,7 @@ const ImageSlider = ({ path, images, className = "max-w-3xl" }) => {
 
 
     return (
-        <div className={`flex items-center relative overflow-hidden bg-white shadow-lg shadow-neutral-700/50 aspect-video rounded-xl w-full ${className}`}>
+        <div className={`flex items-center relative overflow-hidden bg-neutral-200 shadow-lg shadow-neutral-700/50 aspect-video rounded-xl w-full ${className}`}>
             <AnimatePresence
                 initial={false}
                 custom={direction}
