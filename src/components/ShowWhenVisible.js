@@ -34,6 +34,7 @@ const visibleVariants = {
             hidden: { y: generateVariable(i, l), opacity: 0 }
         }
     },
+
     slideDown: i => {
         return visibleVariants.slideUp(i, false);
     },
@@ -43,6 +44,10 @@ const visibleVariants = {
             visible: { x: 0, opacity: 1 },
             hidden: { x: generateVariable(i, l), opacity: 0 }
         }
+    },
+
+    slideLeft: i => {
+        return visibleVariants.slideRight(i, true);
     }
 
 }
