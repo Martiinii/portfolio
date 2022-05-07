@@ -25,7 +25,7 @@ const LevelDot = ({ level }) => {
 const SkillTag = (value, level) => {
     return (
         <motion.div
-            className="flex gap-2 items-center uppercase font-mono font-semibold bg-zinc-300 text-neutral-700 px-2 py-1 rounded-lg shadow-md shadow-neutral-400/50"
+            className="flex gap-2 items-center uppercase font-mono font-semibold bg-stone-200 text-neutral-700 px-2 py-1 rounded-lg shadow-md shadow-neutral-400/50"
             whileHover={{y: 5}}
             whileTap={{y: 5}}
             layout
@@ -43,6 +43,7 @@ const SkillTag = (value, level) => {
 
 // Base
 const JSSkillTag = () => SkillTag("JavaScript", 1);
+const TSSkillTag = () => SkillTag("TypeScript", 2)
 const CSSSkillTag = () => SkillTag("CSS", 1);
 const HTMLSkillTag = () => SkillTag("HTML", 1);
 
@@ -82,6 +83,7 @@ export {
     LevelDot,
 
     JSSkillTag,
+    TSSkillTag,
     CSSSkillTag,
     HTMLSkillTag,
 
