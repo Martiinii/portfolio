@@ -2,65 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-* ::-webkit-scrollbar {
-    @apply w-4 h-4;
-}
-* ::-webkit-scrollbar-track {
-    @apply bg-neutral-400;
-}
-* ::-webkit-scrollbar-track:horizontal {
-    @apply rounded-full;
-}
-
-* ::-webkit-scrollbar-thumb {
-    @apply bg-neutral-200 rounded-full border-4 border-solid border-transparent bg-clip-content;
-}
-
-* ::-webkit-scrollbar-thumb:hover {
-    @apply bg-neutral-50;
-}
- 
-html {
-    @apply motion-safe:scroll-smooth;
-}
-
-main {
-    @apply md:pr-48;
-}
-
-section {
-    @apply p-5;
-}
-
-section > article p {
-    @apply my-3;
-}
-
-
-.fancy-header {
-    @apply inline-block font-display bg-gradient-to-r from-cyan-500 to-sky-700 bg-clip-text text-transparent drop-shadow-md;
-}
-
-.fancy-text {
-    @apply whitespace-nowrap isolate bg-white rounded-md font-semibold text-lg px-4 py-2 mx-1 relative shadow-md hover:shadow-lg transition-all;
-    @apply before:absolute before:h-2/3 before:aspect-square before:-left-1 before:-bottom-1 before:-z-10 before:rounded-md before:bg-emerald-500;
-    @apply after:absolute after:h-2/3 after:aspect-square after:-right-1 after:-top-1 after:-z-10 after:rounded-md after:bg-purple-600;
-
-    @apply hover:before:-left-2 hover:before:-bottom-2 hover:before:rotate-6 hover:before:bg-purple-700 hover:before:h-1/2 before:transition-all;
-    @apply hover:after:-right-3 hover:after:-top-3 hover:after:rotate-6 hover:after:bg-emerald-600 hover:after:h-5/6 after:transition-all;
-}
-
 @layer base {
+    * ::-webkit-scrollbar {
+        @apply w-4 h-4;
+    }
+
+    * ::-webkit-scrollbar-track {
+        @apply bg-neutral-400;
+    }
+
+    * ::-webkit-scrollbar-track:horizontal {
+        @apply rounded-full;
+    }
+
+    * ::-webkit-scrollbar-thumb {
+        @apply bg-neutral-200 rounded-full border-4 border-solid border-transparent bg-clip-content;
+    }
+
+    * ::-webkit-scrollbar-thumb:hover {
+        @apply bg-neutral-50;
+    }
+    
+
+    html {
+        @apply motion-safe:scroll-smooth;
+    }
+
+    main {
+        @apply md:pr-48;
+    }
+
+    section {
+        @apply p-5 sm:p-10;
+    }
+
+    section > article p {
+        @apply my-3;
+    }
+}
+
+@layer components {
     .bg-primary {
         @apply bg-gradient-to-br from-stone-100 to-stone-200 text-neutral-800;
     }
 
     .bg-secondary {
-        @apply bg-gradient-to-br from-stone-200 to-stone-300 text-neutral-900;
+        @apply bg-gradient-to-br from-neutral-100 to-neutral-200 text-neutral-900;
     }
 
     .navbar {
-        @apply bg-white px-4 py-3 fixed z-50 rounded-b-lg md:rounded-none w-full md:h-screen md:py-10 top-0 md:right-0 md:w-48 md:overflow-auto transition-transform duration-300 delay-100;
+        @apply bg-stone-50 px-4 py-3 fixed z-50 rounded-b-lg md:rounded-none w-full md:h-screen md:py-10 top-0 md:right-0 md:w-48 md:overflow-auto transition-transform duration-300 delay-100;
     }
 
     .btn {
@@ -68,11 +59,24 @@ section > article p {
     }
 
     .slider-btn {
-        @apply absolute z-10 font-semibold rounded-full flex justify-center items-center aspect-square bg-neutral-100 hover:bg-neutral-200 w-10 hover:scale-110 transition-all duration-300;
+        @apply absolute z-10 font-semibold rounded-full flex justify-center items-center aspect-square bg-neutral-50 hover:bg-slate-200 w-10 hover:scale-110 transition-all duration-300;
     }
 
     .header {
         @apply w-full font-medium text-3xl xs:text-4xl;
+    }
+
+    .fancy-header {
+        @apply inline-block font-display bg-gradient-to-r from-cyan-500 to-sky-700 bg-clip-text text-transparent drop-shadow-md;
+    }
+
+    .fancy-text {
+        @apply whitespace-nowrap isolate bg-white rounded-md font-semibold text-lg px-4 py-2 mx-1 relative shadow-md hover:shadow-lg transition-all;
+        @apply before:absolute before:h-2/3 before:aspect-square before:-left-1 before:-bottom-1 before:-z-10 before:rounded-md before:bg-sky-400;
+        @apply after:absolute after:h-2/3 after:aspect-square after:-right-1 after:-top-1 after:-z-10 after:rounded-md after:bg-blue-500;
+
+        @apply hover:before:-left-2 hover:before:-bottom-2 hover:before:rotate-6 hover:before:bg-blue-600 hover:before:h-1/2 before:transition-all;
+        @apply hover:after:-right-3 hover:after:-top-3 hover:after:rotate-6 hover:after:bg-sky-500 hover:after:h-5/6 after:transition-all;
     }
 
     .header-c {
@@ -80,7 +84,21 @@ section > article p {
     }
 
     .header-st {
-        @apply relative font-medium text-base xs:text-lg lg:text-3xl bg-white/40 backdrop-blur-sm py-2 px-5 xs:py-4 xs:px-7 shadow-lg shadow-neutral-600/30 transition-shadow hover:shadow-pink-600 hover:shadow-nooffset select-none whitespace-nowrap;
+        @apply relative uneven-border font-medium text-base xs:text-lg lg:text-3xl bg-white/40 backdrop-blur-sm py-2 px-5 xs:py-4 xs:px-7 shadow-lg shadow-neutral-600/30 transition-shadow hover:shadow-cyan-500 hover:shadow-nooffset select-none whitespace-nowrap;
+    }
+
+    .card {
+        @apply flex flex-col gap-5 bg-stone-100 p-5 rounded-xl shadow-md shadow-neutral-900/20;
+    }
+
+    .project-info {
+        @apply flex relative gap-5 flex-col w-fit mx-auto;
+        @apply before:block lg:before:hidden before:w-0.5 before:absolute before:h-full before:bg-neutral-300 before:top-0 before:-mx-5
+    }
+}
+
+@layer utilities {
+    .uneven-border {
         border-radius: 50px 15px;
     }
 }
