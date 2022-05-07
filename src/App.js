@@ -14,6 +14,7 @@ function App() {
   return (
     <main>
       <Navbar />
+
       <section className="bg-primary min-h-screen pt-40 flex flex-col gap-20 justify-between">
         <MainHeader />
         <ScrollDownArrow />
@@ -52,15 +53,14 @@ function App() {
             <LegendItem title="Basic knowledge" level={2} />
             <LegendItem title="Still learning" level={3} />
           </div>
-
         </ShowWhenVisible>
-
       </section>
 
       <section className="bg-secondary min-h-screen" id="work">
         <H2>My projects</H2>
         <WOMProject />
       </section>
+      
     </main>
   );
 }
