@@ -20,7 +20,7 @@ const SmallText = ({ children, variants, className }) => {
 const LeftVariant = (delay) => {
     return {
         initial: {
-            x: "-200%",
+            x: "-100",
             y: "-25%",
         },
         animate: {
@@ -44,7 +44,7 @@ const LeftVariant = (delay) => {
 const RightVariant = (delay) => {
     return {
         initial: {
-            x: "200%",
+            x: "100",
             y: "25%",
         },
         animate: {
