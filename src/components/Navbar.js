@@ -53,12 +53,14 @@ const Navbar = () => {
 const Logo = () => {
     return (
         <a
-            className="rounded-full shadow-zinc-500 shadow-md overflow-hidden flex w-16 md:w-20"
+            className="rounded-full shadow-zinc-500 shadow-md overflow-hidden flex w-16"
             href="/#"
         >
             <img
                 src="/logo.png"
                 alt="Logo"
+                width="64px"
+                height="64px"
             />
         </a>
     );
