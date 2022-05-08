@@ -39,6 +39,7 @@ const Navbar = () => {
                 <button
                     className="btn md:hidden p-3 focus:ring-gray-300 hover:bg-slate-100 flex shadow-none"
                     onClick={() => { toggleVisibility() }}
+                    aria-label={mobileMenuVisible ? "Hide menu" : "Show menu"}
                 >
                     <FontAwesomeIcon icon={faBars} />
                 </button>
