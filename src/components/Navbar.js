@@ -58,7 +58,7 @@ const Logo = () => {
         >
             <img
                 src="/logo.png"
-                alt="Logo"
+                alt="Site logo"
                 width="64px"
                 height="64px"
             />
