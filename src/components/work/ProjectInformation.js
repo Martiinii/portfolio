@@ -1,15 +1,53 @@
+import { faGithub } from "@fortawesome/free-brands-svg-icons";
+import { faArrowUpRightFromSquare } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import React from "react";
 import Breaker from "../Breaker";
 import ImageSlider from "../ImageSlider"
 import { ShowWhenVisible, visibleVariants } from "../ShowWhenVisible";
 import { CSSSkillTag, FigmaSkillTag, FramerMotionSkillTag, HTMLSkillTag, JSSkillTag, NextSkillTag, PHPSkillTag, SQLSkillTag, TailwindSkillTag } from "../skills/SkillTag";
 
-const ProjectHeader = ({ description, title, direction }) => {
+const ProjectLink = ({ link = null, icon, label }) => {
+    if (link === null) return null;
+
+    return (
+        <a
+            aria-label={label}
+            href={link}
+            target="_blank"
+            className="link text-xl"
+        >
+            <FontAwesomeIcon icon={icon} />
+        </a>
+    );
+}
+
+const ProjectHeader = ({ description, title, externalLink, githubLink, direction }) => {
+    const hasLink = externalLink || githubLink;
+
     return (
         <header className={`card max-w-sm lg:max-w-full mb-auto ${direction === 1 ? 'justify-self-end lg:order-2' : ''}`}>
             <h3 className="text-xl font-bold after:h-px after:inline-block text-center">{title}</h3>
             <Breaker />
             <div className="w-full">{description}</div>
+
+            {hasLink && <>
+                <Breaker />
+                <div className="flex flex-wrap gap-3">
+                    <ProjectLink
+                        link={externalLink}
+                        icon={faArrowUpRightFromSquare}
+                        label="External link"
+                    />
+                    <ProjectLink
+                        link={githubLink}
+                        icon={faGithub}
+                        label="Link to github repositorium"
+                    />
+                </div>
+            </>}
+
+
         </header>
     )
 }
@@ -31,7 +69,7 @@ const ProjectCard = ({ path, images, skills }) => {
     )
 }
 
-const ProjectInformation = ({ path, images, title, skills = [], children, direction = 0 }) => {
+const ProjectInformation = ({ path, images, title, skills = [], children, direction = 0, externalLink, githubLink }) => {
     return (
         <ShowWhenVisible
             variants={visibleVariants.slideUp(50)}
@@ -42,6 +80,8 @@ const ProjectInformation = ({ path, images, title, skills = [], children, direct
                     description={children}
                     title={title}
                     direction={direction}
+                    externalLink={externalLink}
+                    githubLink={githubLink}
                 />
 
                 <ProjectCard
@@ -73,6 +113,8 @@ const WOMProject = () => {
                 <JSSkillTag />,
                 <FigmaSkillTag />,
             ]}
+            externalLink="https://wom.martiinii.dev"
+            githubLink="https://github.com/Martiinii/word-o-mat"
         >
             <p>Web application for learning / revising words or concepts for exams. It doesn't require any account, data is stored in browser's local storage.</p>
             <p>Built in support for multiple lists.</p>
