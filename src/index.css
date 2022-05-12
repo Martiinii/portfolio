@@ -55,11 +55,11 @@
     }
 
     .btn {
-        @apply font-semibold rounded-xl p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 shadow-md shadow-slate-700/30 transition-all duration-300;
+        @apply font-semibold rounded-xl p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 shadow-md shadow-slate-700/30 transition duration-300;
     }
 
     .slider-btn {
-        @apply absolute z-10 font-semibold rounded-full flex justify-center items-center aspect-square bg-neutral-50 hover:bg-slate-200 w-10 hover:scale-110 transition-all duration-300;
+        @apply absolute z-10 font-semibold rounded-full flex justify-center items-center aspect-square bg-neutral-50 hover:bg-slate-200 w-10 hover:scale-110 transition duration-300;
     }
 
     .header {
@@ -71,7 +71,7 @@
     }
 
     .fancy-text {
-        @apply whitespace-nowrap isolate bg-white rounded-md font-semibold text-lg px-4 py-2 mx-1 relative shadow-md hover:shadow-lg transition-all;
+        @apply whitespace-nowrap isolate bg-white rounded-md font-semibold text-lg px-4 py-2 mx-1 relative shadow-md hover:shadow-lg;
         @apply before:absolute before:h-2/3 before:aspect-square before:-left-1 before:-bottom-1 before:-z-10 before:rounded-md before:bg-sky-400;
         @apply after:absolute after:h-2/3 after:aspect-square after:-right-1 after:-top-1 after:-z-10 after:rounded-md after:bg-blue-500;
 
@@ -94,6 +94,17 @@
     .project-info {
         @apply grid relative gap-5 lg:grid-cols-3 lg:grid-flow-col max-w-6xl mx-auto;
         @apply before:block lg:before:hidden before:w-0.5 before:absolute before:h-full before:bg-black/10 before:top-0
+    }
+
+    .link {
+        @apply w-fit relative text-sky-700 hover:text-pink-700 transition;
+        @apply before:w-full before:absolute before:left-0 before:bottom-0 before:origin-right before:scale-x-0 before:transition;
+        @apply hover:before:scale-x-100 hover:before:origin-left;
+
+    }
+    .link::before {
+        --tc: currentColor;
+        border-top: 2px solid var(--tc);
     }
 }
 
