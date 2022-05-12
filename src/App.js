@@ -22,7 +22,7 @@ function App() {
 
       <section className="bg-secondary min-h-screen" id="about">
         <H2>About me</H2>
-        <article className="max-w-4xl text-lg mx-auto">
+        <article className="max-w-4xl mx-auto">
           <ShowWhenVisible delay={.5} variants={visibleVariants.slideRight(80)} type="spring" duration={1.5}>
             <p>I&nbsp;am a Full-Stack Web Developer from Poland. I&nbsp;mainly do the Front-End, less often the Back-End. I&nbsp;love minimalist and modern websites.</p>
           </ShowWhenVisible>
