@@ -98,7 +98,7 @@
 
     .link {
         @apply w-fit relative text-sky-700 hover:text-indigo-600 transition;
-        @apply before:w-full before:absolute before:left-0 before:bottom-0 before:origin-right before:scale-x-0 before:transition;
+        @apply before:w-full before:absolute before:left-0 before:-bottom-0.5 before:origin-right before:scale-x-0 before:transition;
         @apply hover:before:scale-x-100 hover:before:origin-left;
 
     }
