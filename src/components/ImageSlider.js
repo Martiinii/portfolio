@@ -56,7 +56,7 @@ const ImageSlider = ({ path, images, className = "max-w-3xl" }) => {
 
                     key={page}
                     src={path + images[currentIndex]}
-                    alt={`${currentIndex+1}/${images.length} image of the project`}
+                    alt={`${currentIndex + 1}/${images.length} image of the project`}
                     custom={direction}
                     variants={variants}
                     initial="initial"
@@ -67,7 +67,7 @@ const ImageSlider = ({ path, images, className = "max-w-3xl" }) => {
                         opacity: { duration: 0.2 }
                     }}
 
-                    drag="x"
+                    drag={images.length > 1 ? "x" : false}
                     dragConstraints={{ left: 0, right: 0 }}
                     dragElastic={1}
 
@@ -82,13 +82,20 @@ const ImageSlider = ({ path, images, className = "max-w-3xl" }) => {
                 />
 
             </AnimatePresence>
-            <button className="slider-btn left-5" aria-label="Previous image" onClick={() => { changePage(-1) }}>
-                <FontAwesomeIcon icon={faAngleLeft} fixedWidth />
-            </button>
+            {
+                (images.length > 1) &&
 
-            <button className="slider-btn right-5" aria-label="Next image" onClick={() => { changePage(1) }}>
-                <FontAwesomeIcon icon={faAngleRight} fixedWidth />
-            </button>
+                <>
+                    <button className="slider-btn left-5" aria-label="Previous image" onClick={() => { changePage(-1) }}>
+                        <FontAwesomeIcon icon={faAngleLeft} fixedWidth />
+                    </button>
+
+                    <button className="slider-btn right-5" aria-label="Next image" onClick={() => { changePage(1) }}>
+                        <FontAwesomeIcon icon={faAngleRight} fixedWidth />
+                    </button>
+                </>
+            }
+
         </div>
     )
 }
