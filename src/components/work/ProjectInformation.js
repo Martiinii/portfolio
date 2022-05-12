@@ -5,7 +5,7 @@ import React from "react";
 import Breaker from "../Breaker";
 import ImageSlider from "../ImageSlider"
 import { ShowWhenVisible, visibleVariants } from "../ShowWhenVisible";
-import { CSSSkillTag, FigmaSkillTag, FramerMotionSkillTag, HTMLSkillTag, JSSkillTag, NextSkillTag, PHPSkillTag, SQLSkillTag, TailwindSkillTag } from "../skills/SkillTag";
+import { CSSSkillTag, FigmaSkillTag, FramerMotionSkillTag, HTMLSkillTag, JSSkillTag, NextSkillTag, PHPSkillTag, ReactSkillTag, SQLSkillTag, TailwindSkillTag } from "../skills/SkillTag";
 
 const ProjectLink = ({ link = null, icon, label }) => {
     if (link === null) return null;
@@ -15,6 +15,7 @@ const ProjectLink = ({ link = null, icon, label }) => {
             aria-label={label}
             href={link}
             target="_blank"
+            rel="noreferrer"
             className="link text-xl"
         >
             <FontAwesomeIcon icon={icon} />
@@ -148,4 +149,24 @@ const SMRNDZProject = () => {
     )
 }
 
-export { WOMProject, SMRNDZProject }
+const TailwindColorsProject = () => {
+    return (
+        <ProjectInformation
+            title="Tailwind CSS Colors"
+            path="images/tailwindcolors/"
+            images={[
+                "1.webp"
+            ]}
+            skills={[
+                <ReactSkillTag />,
+                <TailwindSkillTag />
+            ]}
+            externalLink="https://martiinii.github.io/tailwindcolors/"
+            githubLink="https://github.com/Martiinii/tailwindcolors"
+        >
+            <p>Website that displays every color from Tailwind CSS. Clicking on a color copies its value. Built-in text to preview your color combo.</p>
+        </ProjectInformation>
+    )
+}
+
+export { WOMProject, SMRNDZProject, TailwindColorsProject }

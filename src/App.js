@@ -8,7 +8,7 @@ import { ShowWhenVisible, visibleVariants } from "./components/ShowWhenVisible";
 import TechGroups from "./components/skills/TechGroups";
 import FancyText from "./components/about/FancyText";
 import WavyText from "./components/about/WavyText";
-import { SMRNDZProject, WOMProject } from "./components/work/ProjectInformation"
+import { SMRNDZProject, TailwindColorsProject, WOMProject } from "./components/work/ProjectInformation"
 
 function App() {
   return (
@@ -60,6 +60,7 @@ function App() {
         <H2>My projects</H2>
         <WOMProject />
         <SMRNDZProject />
+        <TailwindColorsProject />
       </section>
 
     </main>
