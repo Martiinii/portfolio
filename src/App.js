@@ -8,7 +8,7 @@ import { ShowWhenVisible, visibleVariants } from "./components/ShowWhenVisible";
 import TechGroups from "./components/skills/TechGroups";
 import FancyText from "./components/about/FancyText";
 import WavyText from "./components/about/WavyText";
-import { WOMProject } from "./components/work/ProjectInformation"
+import { SMRNDZProject, WOMProject } from "./components/work/ProjectInformation"
 
 function App() {
   return (
@@ -59,8 +59,9 @@ function App() {
       <section className="bg-secondary min-h-screen" id="work">
         <H2>My projects</H2>
         <WOMProject />
+        <SMRNDZProject />
       </section>
-      
+
     </main>
   );
 }
