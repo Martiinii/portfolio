@@ -2,7 +2,7 @@ import { faCircle, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 
-const LevelDot = ({ level, icon, overrideColor }) => {
+const LevelDot = ({ level, icon = faCircle, overrideColor }) => {
     let color;
 
     if (overrideColor) {
@@ -26,7 +26,7 @@ const LevelDot = ({ level, icon, overrideColor }) => {
     )
 }
 
-const SkillTag = (value, level, icon = faCircle, color) => {
+const SkillTag = (value, level, icon, color) => {
     return (
         <motion.div
             className="flex gap-2 items-center uppercase font-mono font-semibold bg-stone-200 text-neutral-700 px-2 py-1 rounded-lg shadow-md shadow-neutral-400/50"
