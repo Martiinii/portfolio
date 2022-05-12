@@ -1,36 +1,40 @@
-import { faCircle } from "@fortawesome/free-solid-svg-icons";
+import { faCircle, faHeart } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { motion } from "framer-motion";
 
-const LevelDot = ({ level }) => {
+const LevelDot = ({ level, icon, overrideColor }) => {
     let color;
 
-    switch (level) {
-        case 1:
-            color = "text-emerald-500";
-            break;
-        case 2:
-            color = "text-sky-600";
-            break;
-        default:
-            color = "text-pink-500";
-            break;
+    if (overrideColor) {
+        color = overrideColor;
+    } else {
+        switch (level) {
+            case 1:
+                color = "text-emerald-500";
+                break;
+            case 2:
+                color = "text-sky-600";
+                break;
+            default:
+                color = "text-pink-500";
+                break;
+        }
     }
 
     return (
-        <FontAwesomeIcon icon={faCircle} className={`text-xs ${color}`} />
+        <FontAwesomeIcon icon={icon} className={`text-xs ${color}`} />
     )
 }
 
-const SkillTag = (value, level) => {
+const SkillTag = (value, level, icon = faCircle, color) => {
     return (
         <motion.div
             className="flex gap-2 items-center uppercase font-mono font-semibold bg-stone-200 text-neutral-700 px-2 py-1 rounded-lg shadow-md shadow-neutral-400/50"
-            whileHover={{y: 5}}
-            whileTap={{y: 5}}
+            whileHover={{ y: 5 }}
+            whileTap={{ y: 5 }}
             layout
         >
-            <LevelDot level={level} />
+            <LevelDot level={level} icon={icon} overrideColor={color} />
             {value}
         </motion.div>
     );
@@ -77,6 +81,9 @@ const SQLSkillTag = () => SkillTag("SQL", 2);
 const MariaDBSkillTag = () => SkillTag("MariaDB", 2);
 const MongoDBSkillTag = () => SkillTag("MongoDB", 3);
 
+// Special
+const LoveSkillTag = () => SkillTag("Love", 0, faHeart, "text-red-500")
+
 
 
 export {
@@ -111,4 +118,6 @@ export {
     SQLSkillTag,
     MariaDBSkillTag,
     MongoDBSkillTag,
+
+    LoveSkillTag
 }
