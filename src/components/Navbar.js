@@ -37,7 +37,7 @@ const Navbar = () => {
             >
                 <Logo />
                 <button
-                    className="btn md:hidden p-3 focus:ring-gray-300 hover:bg-slate-100 flex shadow-none"
+                    className="btn md:hidden p-3 focus-visible:ring-gray-300 hover:bg-slate-100 flex shadow-none"
                     onClick={() => { toggleVisibility() }}
                     aria-label={mobileMenuVisible ? "Hide menu" : "Show menu"}
                 >
@@ -83,7 +83,7 @@ const NavItem = ({ href, value, onClick }) => {
     return (
         <li>
             <a
-                className="btn shadow-none block py-2 px-4 text-slate-600 bg-transparent md:p-3 font-bold focus:ring-sky-600 hover:bg-slate-100"
+                className="btn shadow-none block py-2 px-4 text-slate-600 bg-transparent md:p-3 font-bold focus-visible:ring-sky-600 hover:bg-slate-100"
                 href={href}
                 onClick={onClick}
             >
