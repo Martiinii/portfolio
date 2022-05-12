@@ -28,7 +28,7 @@ const ProjectHeader = ({ description, title, externalLink, githubLink, direction
 
     return (
         <header className={`card max-w-sm lg:max-w-full mb-auto ${direction === 1 ? 'justify-self-end lg:order-2' : ''}`}>
-            <h3 className="text-xl font-bold after:h-px after:inline-block text-center">{title}</h3>
+            <h3 className="text-2xl font-bold after:h-px after:inline-block text-center">{title}</h3>
             <Breaker />
             <div className="w-full">{description}</div>
 
