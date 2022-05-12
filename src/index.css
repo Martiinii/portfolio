@@ -55,7 +55,7 @@
     }
 
     .btn {
-        @apply font-semibold rounded-xl p-3 focus:outline-none focus:ring-2 focus:ring-offset-4 shadow-md shadow-slate-700/30 transition-all duration-300;
+        @apply font-semibold rounded-xl p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 shadow-md shadow-slate-700/30 transition-all duration-300;
     }
 
     .slider-btn {
@@ -92,8 +92,8 @@
     }
 
     .project-info {
-        @apply flex relative gap-5 flex-col w-fit mx-auto;
-        @apply before:block lg:before:hidden before:w-0.5 before:absolute before:h-full before:bg-neutral-300 before:top-0 before:-mx-5
+        @apply grid relative gap-5 lg:grid-cols-3 lg:grid-flow-col max-w-6xl mx-auto;
+        @apply before:block lg:before:hidden before:w-0.5 before:absolute before:h-full before:bg-black/10 before:top-0
     }
 }
 
