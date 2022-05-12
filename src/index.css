@@ -32,7 +32,7 @@
         @apply md:pr-48;
     }
 
-    section {
+    section, footer {
         @apply p-5 sm:p-10 text-xl;
     }
 

@@ -9,6 +9,7 @@ import TechGroups from "./components/skills/TechGroups";
 import FancyText from "./components/about/FancyText";
 import WavyText from "./components/about/WavyText";
 import { SMRNDZProject, TailwindColorsProject, WOMProject } from "./components/work/ProjectInformation"
+import FooterBreaker from "./components/footer/FooterBreaker";
 
 function App() {
   return (
@@ -56,12 +57,21 @@ function App() {
         </ShowWhenVisible>
       </section>
 
-      <section className="bg-secondary min-h-screen" id="work">
-        <H2>My projects</H2>
-        <WOMProject />
-        <SMRNDZProject />
-        <TailwindColorsProject />
+      <section className="bg-secondary min-h-screen p-0" id="work">
+        <div className="p-5 sm:p-10">
+          <H2>My projects</H2>
+          <WOMProject />
+          <SMRNDZProject />
+          <TailwindColorsProject />
+        </div>
+        <FooterBreaker />
       </section>
+
+      <footer className="bg-indigo-700 text-amber-50 font-semibold min-h-screen">
+        <article className="max-w-4xl mx-auto">
+          
+        </article>
+      </footer>
 
     </main>
   );
