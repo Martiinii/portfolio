@@ -13,6 +13,7 @@ const Navbar = () => {
         { href: '/#about', value: 'About' },
         { href: '/#skills', value: 'Skills' },
         { href: '/#work', value: 'My work' },
+        {href: '/#contact', value: 'Contact'}
     ];
 
     const [style, setStyle] = useState("");
