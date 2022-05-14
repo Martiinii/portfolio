@@ -1,6 +1,6 @@
-const Breaker = ({className}) => {
+const Breaker = ({color = "border-neutral-400", className}) => {
     return (
-        <hr className={`border-neutral-400 ${className ?? ""}`}/>
+        <hr className={`${color} ${className ?? ""}`}/>
     )
 }
 
