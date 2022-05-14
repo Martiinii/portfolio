@@ -85,11 +85,11 @@ function App() {
 
           <Breaker color="border-yellow-300" className="my-5" />
 
-          <ShowWhenVisible
-            className="flex gap-3 justify-center items-center"
-          >
-            <span>Made with</span><LoveSkillTag />
+          <ShowWhenVisible className="text-center">
+            <span className="flex gap-3 justify-center items-center mb-5">Made with<LoveSkillTag /></span>
+            <span className="text-sm">Built by Marcin Gąsienica-Makowski 2022</span>
           </ShowWhenVisible>
+          
         </article>
       </footer>
 
