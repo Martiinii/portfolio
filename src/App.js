@@ -11,6 +11,7 @@ import WavyText from "./components/about/WavyText";
 import { SMRNDZProject, TailwindColorsProject, WOMProject } from "./components/work/ProjectInformation"
 import FooterBreaker from "./components/footer/FooterBreaker";
 import { LoveSkillTag } from "./components/skills/SkillTag";
+import { FooterEmailLink, FooterGithubLink } from "./components/footer/FooterLink";
 
 function App() {
   return (
@@ -23,8 +24,9 @@ function App() {
       </section>
 
       <section className="bg-secondary min-h-screen" id="about">
-        <H2>About me</H2>
         <article className="max-w-4xl mx-auto">
+          <H2>About me</H2>
+
           <ShowWhenVisible delay={.5} variants={visibleVariants.slideRight(80)} type="spring" duration={1.5}>
             <p>I&nbsp;am a Full-Stack Web Developer from Poland. I&nbsp;mainly do the Front-End, less often the Back-End. I&nbsp;love minimalist and modern websites.</p>
           </ShowWhenVisible>
@@ -42,34 +44,50 @@ function App() {
       </section>
 
       <section className="bg-primary min-h-screen" id="skills">
-        <H2>Technologies I use</H2>
-        <ShowWhenVisible delay={.6} className="grid gap-5 justify-center items-center max-w-4xl mx-auto">
-          <TechGroups />
-          <Breaker className="mt-10" />
+        <article className="max-w-4xl mx-auto">
+          <H2>Technologies I use</H2>
 
-          <div>
-            <LegendItem title="Good knowledge" level={1} />
-            <LegendItem title="Basic knowledge" level={2} />
-            <LegendItem title="Still learning" level={3} />
-          </div>
-        </ShowWhenVisible>
+          <ShowWhenVisible delay={.6} className="grid gap-5 justify-center items-center max-w-4xl mx-auto">
+            <TechGroups />
+            <Breaker className="mt-10" />
+
+            <div>
+              <LegendItem title="Good knowledge" level={1} />
+              <LegendItem title="Basic knowledge" level={2} />
+              <LegendItem title="Still learning" level={3} />
+            </div>
+          </ShowWhenVisible>
+        </article>
       </section>
 
       <section className="bg-secondary min-h-screen p-0" id="work">
-        <div className="p-5 sm:p-10">
+        <article className="p-5 sm:p-10">
           <H2>My projects</H2>
+
           <WOMProject />
           <SMRNDZProject />
           <TailwindColorsProject />
-        </div>
+        </article>
         <FooterBreaker />
       </section>
 
       <footer className="bg-indigo-600 text-yellow-300 font-semibold" id="contact">
         <article className="max-w-4xl mx-auto">
           <H2>Contact me</H2>
+
+          <ShowWhenVisible
+          className="card w-fit mx-auto text-lg"
+          variants={visibleVariants.slideRight(100)}
+          >
+            <FooterGithubLink />
+            <FooterEmailLink />
+          </ShowWhenVisible>
+
           <Breaker color="border-yellow-300" className="my-5" />
-          <ShowWhenVisible className="flex gap-3 justify-center items-center">
+
+          <ShowWhenVisible
+            className="flex gap-3 justify-center items-center"
+          >
             <span>Made with</span><LoveSkillTag />
           </ShowWhenVisible>
         </article>
