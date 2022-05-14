@@ -71,19 +71,19 @@ function App() {
         <FooterBreaker />
       </section>
 
-      <footer className="bg-indigo-600 text-yellow-300 font-semibold" id="contact">
+      <footer className="bg-indigo-600 text-yellow-300 font-semibold dark:bg-indigo-800 dark:text-amber-300" id="contact">
         <article className="max-w-4xl mx-auto">
           <H2>Find me here</H2>
 
           <ShowWhenVisible
-            className="card w-fit mx-auto text-sm xs:text-lg my-20"
+            className="card w-fit mx-auto text-sm xs:text-lg my-20 dark:bg-none dark:bg-black/30"
             variants={visibleVariants.slideRight(100)}
           >
             <FooterGithubLink />
             <FooterEmailLink />
           </ShowWhenVisible>
 
-          <Breaker color="border-yellow-300" className="my-5" />
+          <Breaker color="border-yellow-300 dark:border-amber-300" className="my-5" />
 
           <ShowWhenVisible className="text-center">
             <span className="flex gap-3 justify-center items-center mb-5">Made with<LoveSkillTag /></span>

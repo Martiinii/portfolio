@@ -29,7 +29,7 @@ const LevelDot = ({ level, icon = faCircle, overrideColor }) => {
 const SkillTag = (value, level, icon, color) => {
     return (
         <motion.div
-            className="flex gap-2 items-center uppercase font-mono font-semibold bg-stone-200 text-neutral-700 px-2 py-1 rounded-lg shadow-md shadow-neutral-400/50"
+            className="flex gap-2 items-center uppercase font-mono font-semibold bg-stone-200 text-neutral-700 px-2 py-1 rounded-lg shadow-md shadow-neutral-400/50 dark:bg-slate-700 dark:text-neutral-300 dark:shadow-black/30"
             whileHover={{ y: 5 }}
             whileTap={{ y: 5 }}
             layout
