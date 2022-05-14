@@ -8,7 +8,7 @@
     }
 
     * ::-webkit-scrollbar-track {
-        @apply bg-neutral-400;
+        @apply bg-neutral-400 dark:bg-slate-700;
     }
 
     * ::-webkit-scrollbar-track:horizontal {
@@ -16,16 +16,11 @@
     }
 
     * ::-webkit-scrollbar-thumb {
-        @apply bg-neutral-200 rounded-full border-4 border-solid border-transparent bg-clip-content;
-    }
-
-    * ::-webkit-scrollbar-thumb:hover {
-        @apply bg-neutral-50;
+        @apply bg-neutral-200 hover:bg-neutral-50 rounded-full border-4 border-solid border-transparent bg-clip-content dark:bg-slate-500 dark:hover:bg-slate-400;
     }
     
-
     html {
-        @apply motion-safe:scroll-smooth;
+        @apply motion-safe:scroll-smooth dark:text-neutral-200;
     }
 
     main {
@@ -43,23 +38,23 @@
 
 @layer components {
     .bg-primary {
-        @apply bg-gradient-to-br from-stone-100 to-stone-200 text-neutral-800;
+        @apply bg-gradient-to-br from-stone-100 to-stone-200 text-neutral-800 dark:from-slate-800 dark:to-slate-900 dark:text-inherit;
     }
 
     .bg-secondary {
-        @apply bg-gradient-to-br from-neutral-100 to-neutral-200 text-neutral-900;
+        @apply bg-gradient-to-br from-neutral-100 to-neutral-200 text-neutral-900 dark:from-gray-800 dark:to-gray-900 dark:text-inherit;
     }
 
     .navbar {
-        @apply bg-stone-50 px-4 py-3 fixed z-50 rounded-b-lg md:rounded-none w-full md:h-screen md:py-10 top-0 md:right-0 md:w-48 md:overflow-auto transition-transform duration-300 delay-100;
+        @apply bg-stone-50 px-4 py-3 fixed z-50 rounded-b-lg md:rounded-none w-full md:h-screen md:py-10 top-0 md:right-0 md:w-48 md:overflow-auto transition-transform duration-300 delay-100 dark:bg-slate-800;
     }
 
     .btn {
-        @apply font-semibold rounded-xl p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 shadow-md shadow-slate-700/30 transition duration-300;
+        @apply font-semibold rounded-xl p-3 focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-4 shadow-md shadow-slate-700/30 transition duration-300 ring-offset-transparent;
     }
 
     .slider-btn {
-        @apply absolute z-10 font-semibold rounded-full flex justify-center items-center aspect-square bg-neutral-50 hover:bg-slate-200 w-10 hover:scale-110 transition duration-300 border-2 border-neutral-700;
+        @apply absolute z-10 font-semibold rounded-full flex justify-center items-center aspect-square bg-neutral-50 hover:bg-slate-200 w-10 hover:scale-110 transition duration-300 border-2 border-neutral-700 dark:text-neutral-900;
     }
 
     .header {
@@ -67,11 +62,11 @@
     }
 
     .fancy-header {
-        @apply inline-block font-display bg-gradient-to-r from-cyan-500 to-sky-700 bg-clip-text text-transparent drop-shadow-md;
+        @apply inline-block font-display bg-gradient-to-r from-cyan-500 to-sky-700 bg-clip-text text-transparent drop-shadow-md dark:from-cyan-400 dark:to-sky-600;
     }
 
     .fancy-text {
-        @apply whitespace-nowrap isolate bg-white rounded-md font-semibold text-lg px-4 py-2 mx-1 relative shadow-md hover:shadow-lg;
+        @apply whitespace-nowrap isolate bg-white rounded-md font-semibold text-lg px-4 py-2 mx-1 relative shadow-md hover:shadow-lg dark:bg-slate-700;
         @apply before:absolute before:h-2/3 before:aspect-square before:-left-1 before:-bottom-1 before:-z-10 before:rounded-md before:bg-sky-400;
         @apply after:absolute after:h-2/3 after:aspect-square after:-right-1 after:-top-1 after:-z-10 after:rounded-md after:bg-blue-500;
 
@@ -84,27 +79,23 @@
     }
 
     .header-st {
-        @apply relative uneven-border font-medium text-base xs:text-lg lg:text-3xl bg-white/40 backdrop-blur-sm py-2 px-5 xs:py-4 xs:px-7 shadow-lg shadow-neutral-600/30 transition-shadow hover:shadow-cyan-500 hover:shadow-nooffset select-none whitespace-nowrap;
+        @apply relative uneven-border font-medium text-base xs:text-lg lg:text-3xl bg-white/40 backdrop-blur-sm py-2 px-5 xs:py-4 xs:px-7 shadow-lg shadow-neutral-600/30 transition-shadow hover:shadow-cyan-500 hover:shadow-nooffset select-none whitespace-nowrap dark:bg-black/30 dark:shadow-slate-900/40 dark:hover:shadow-cyan-400;
     }
 
     .card {
-        @apply flex flex-col gap-5 bg-stone-100 p-5 rounded-xl shadow-md shadow-neutral-900/20;
+        @apply flex flex-col gap-5 bg-stone-100 p-5 rounded-xl shadow-md shadow-neutral-900/20 dark:bg-gradient-to-br dark:from-slate-700 dark:to-slate-800;
     }
 
     .project-info {
         @apply grid relative gap-5 lg:grid-cols-3 lg:grid-flow-col max-w-6xl mx-auto;
-        @apply before:block lg:before:hidden before:w-0.5 before:absolute before:h-full before:bg-black/10 before:top-0
+        @apply before:block lg:before:hidden before:w-0.5 before:absolute before:h-full before:bg-black/10 before:top-0 dark:before:bg-white/10;
     }
 
     .link {
-        @apply w-fit relative text-sky-700 hover:text-indigo-600 transition duration-300;
-        @apply before:w-full before:absolute before:left-0 before:-bottom-0.5 before:origin-right before:scale-x-0 before:transition duration-300;
+        @apply w-fit relative text-sky-700 hover:text-indigo-600 transition duration-200 dark:text-sky-400 dark:hover:text-violet-500;
+        @apply before:w-full before:absolute before:left-0 before:-bottom-0.5 before:origin-right before:scale-x-0 before:transition before:duration-300;
         @apply hover:before:scale-x-100 hover:before:origin-left;
-
-    }
-    .link::before {
-        --tc: currentColor;
-        border-top: 2px solid var(--tc);
+        @apply before:border-t-2 before:border-current;
     }
 }
 

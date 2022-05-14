@@ -55,7 +55,7 @@ const Navbar = () => {
 const Logo = () => {
     return (
         <a
-            className="rounded-full shadow-zinc-500 shadow-md overflow-hidden flex w-16"
+            className="rounded-full shadow-zinc-500 shadow-md overflow-hidden flex w-16 dark:shadow-black/40"
             href="/#"
         >
             <img
@@ -84,7 +84,7 @@ const NavItem = ({ href, value, onClick }) => {
     return (
         <li>
             <a
-                className="btn shadow-none block py-2 px-4 text-slate-600 bg-transparent md:p-3 font-bold focus-visible:ring-sky-600 hover:bg-slate-100"
+                className="btn shadow-none block py-2 px-4 text-slate-600 bg-transparent md:p-3 font-bold focus-visible:ring-sky-600 hover:bg-slate-100 dark:text-neutral-300 dark:hover:bg-slate-700"
                 href={href}
                 onClick={onClick}
             >
