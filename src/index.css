@@ -33,7 +33,7 @@
     }
 
     section, footer {
-        @apply p-5 sm:p-10 text-xl;
+        @apply p-5 sm:p-10 xs:text-xl;
     }
 
     section > article p {

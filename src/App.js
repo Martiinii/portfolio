@@ -76,8 +76,8 @@ function App() {
           <H2>Contact me</H2>
 
           <ShowWhenVisible
-          className="card w-fit mx-auto text-lg"
-          variants={visibleVariants.slideRight(100)}
+            className="card w-fit mx-auto text-sm xs:text-lg my-20"
+            variants={visibleVariants.slideRight(100)}
           >
             <FooterGithubLink />
             <FooterEmailLink />
