@@ -65,10 +65,10 @@ function App() {
         <FooterBreaker />
       </section>
 
-      <footer className="bg-indigo-600 text-yellow-400 font-semibold" id="contact">
+      <footer className="bg-indigo-600 text-yellow-300 font-semibold" id="contact">
         <article className="max-w-4xl mx-auto">
           <H2>Contact me</H2>
-          <Breaker color="border-yellow-400" className="my-5" />
+          <Breaker color="border-yellow-300" className="my-5" />
           <ShowWhenVisible className="flex gap-3 justify-center items-center">
             <span>Made with</span><LoveSkillTag />
           </ShowWhenVisible>
