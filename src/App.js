@@ -10,6 +10,7 @@ import FancyText from "./components/about/FancyText";
 import WavyText from "./components/about/WavyText";
 import { SMRNDZProject, TailwindColorsProject, WOMProject } from "./components/work/ProjectInformation"
 import FooterBreaker from "./components/footer/FooterBreaker";
+import { LoveSkillTag } from "./components/skills/SkillTag";
 
 function App() {
   return (
@@ -41,10 +42,7 @@ function App() {
       </section>
 
       <section className="bg-primary min-h-screen" id="skills">
-        <ShowWhenVisible variants={visibleVariants.slideDown(50)} delay={.5}>
-          <H2>Technologies I use</H2>
-        </ShowWhenVisible>
-
+        <H2>Technologies I use</H2>
         <ShowWhenVisible delay={.6} className="grid gap-5 justify-center items-center max-w-4xl mx-auto">
           <TechGroups />
           <Breaker className="mt-10" />
@@ -67,9 +65,13 @@ function App() {
         <FooterBreaker />
       </section>
 
-      <footer className="bg-indigo-700 text-amber-50 font-semibold min-h-screen">
+      <footer className="bg-indigo-600 text-yellow-400 font-semibold" id="contact">
         <article className="max-w-4xl mx-auto">
-          
+          <H2>Contact me</H2>
+          <Breaker color="border-yellow-400" className="my-5" />
+          <ShowWhenVisible className="flex gap-3 justify-center items-center">
+            <span>Made with</span><LoveSkillTag />
+          </ShowWhenVisible>
         </article>
       </footer>
 
