@@ -73,7 +73,7 @@ function App() {
 
       <footer className="bg-indigo-600 text-yellow-300 font-semibold" id="contact">
         <article className="max-w-4xl mx-auto">
-          <H2>Contact me</H2>
+          <H2>Find me here</H2>
 
           <ShowWhenVisible
             className="card w-fit mx-auto text-sm xs:text-lg my-20"
