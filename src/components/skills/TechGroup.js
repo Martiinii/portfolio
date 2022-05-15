@@ -1,5 +1,5 @@
 import Breaker from "../Breaker"
-import { BootstrapSkillTag, CPPSkillTag, CSSSkillTag, ExpressSkillTag, FigmaSkillTag, FirebaseSkillTag, FramerMotionSkillTag, GatsbySkillTag, GitSkillTag, JavaSkillTag, JSSkillTag, MariaDBSkillTag, MongoDBSkillTag, NextSkillTag, NodeSkillTag, PHPSkillTag, PythonSkillTag, ReactSkillTag, SQLSkillTag, SvelteSkillTag, TailwindSkillTag, ThreeSkillTag, TSSkillTag } from "./SkillTag"
+import { BootstrapSkillTag, CPPSkillTag, CSSSkillTag, ElectronSkillTag, ExpressSkillTag, FigmaSkillTag, FirebaseSkillTag, FramerMotionSkillTag, GatsbySkillTag, GitSkillTag, JavaSkillTag, JSSkillTag, MariaDBSkillTag, MongoDBSkillTag, NextSkillTag, NodeSkillTag, PHPSkillTag, PythonSkillTag, ReactSkillTag, SQLSkillTag, SvelteSkillTag, TailwindSkillTag, ThreeSkillTag, TSSkillTag } from "./SkillTag"
 
 const TechGroup = ({ title, children }) => {
     return (
@@ -66,6 +66,7 @@ const OtherTechGroup = () => {
             <FigmaSkillTag />
             <NodeSkillTag />
             <GitSkillTag />
+            <ElectronSkillTag />
         </TechGroup>
     )
 }

@@ -70,6 +70,7 @@ const FirebaseSkillTag = () => SkillTag("Firebase", 3);
 const NodeSkillTag = () => SkillTag("Node.js", 2);
 const GitSkillTag = () => SkillTag("Git", 2);
 const FigmaSkillTag = () => SkillTag("Figma", 2);
+const ElectronSkillTag = () => SkillTag("Electron", 3);
 
 // Languages
 const JavaSkillTag = () => SkillTag("Java", 1);
@@ -110,6 +111,7 @@ export {
     NodeSkillTag,
     GitSkillTag,
     FigmaSkillTag,
+    ElectronSkillTag,
 
     JavaSkillTag,
     PythonSkillTag,
