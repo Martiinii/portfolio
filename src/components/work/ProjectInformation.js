@@ -5,7 +5,7 @@ import React from "react";
 import Breaker from "../Breaker";
 import ImageSlider from "../ImageSlider"
 import { ShowWhenVisible, visibleVariants } from "../ShowWhenVisible";
-import { CSSSkillTag, FigmaSkillTag, FramerMotionSkillTag, HTMLSkillTag, JSSkillTag, NextSkillTag, PHPSkillTag, ReactSkillTag, SQLSkillTag, TailwindSkillTag } from "../skills/SkillTag";
+import { CSSSkillTag, ElectronSkillTag, FigmaSkillTag, FramerMotionSkillTag, HTMLSkillTag, JSSkillTag, NextSkillTag, PHPSkillTag, ReactSkillTag, SQLSkillTag, TailwindSkillTag } from "../skills/SkillTag";
 
 const ProjectLink = ({ link = null, icon, label }) => {
     if (link === null) return null;
@@ -95,7 +95,7 @@ const ProjectInformation = ({ path, images, title, skills = [], children, direct
     )
 }
 
-const WOMProject = () => {
+const WOMProject = ({dir = 0}) => {
     return (
         <ProjectInformation
             title="Word-o-mat"
@@ -116,6 +116,8 @@ const WOMProject = () => {
             ]}
             externalLink="https://wom.martiinii.dev"
             githubLink="https://github.com/Martiinii/word-o-mat"
+
+            direction={dir}
         >
             <p>Web application for learning / revising words or concepts for exams. It doesn't require any account, data is stored in browser's local storage.</p>
             <p>Built in support for multiple lists.</p>
@@ -123,7 +125,7 @@ const WOMProject = () => {
     )
 }
 
-const SMRNDZProject = () => {
+const SMRNDZProject = ({dir = 0}) => {
     return (
         <ProjectInformation
             title="Smrekówka and Niedźwiedzia Chata"
@@ -142,14 +144,14 @@ const SMRNDZProject = () => {
                 <PHPSkillTag />,
                 <SQLSkillTag />,
             ]}
-            direction={1}
+            direction={dir}
         >
             <p>Website with information about two houses for rent. Includes an easy-to-use booking system with administration panel to manage reservations.</p>
         </ProjectInformation>
     )
 }
 
-const TailwindColorsProject = () => {
+const TailwindColorsProject = ({dir = 0}) => {
     return (
         <ProjectInformation
             title="Tailwind CSS Colors"
@@ -163,10 +165,40 @@ const TailwindColorsProject = () => {
             ]}
             externalLink="https://martiinii.github.io/tailwindcolors/"
             githubLink="https://github.com/Martiinii/tailwindcolors"
+
+            direction={dir}
         >
             <p>Website that displays every color from Tailwind CSS. Clicking on a color copies its value. Built-in text to preview your color combo.</p>
         </ProjectInformation>
     )
 }
 
-export { WOMProject, SMRNDZProject, TailwindColorsProject }
+const ClimbingWallProject = ({dir = 0}) => {
+    return (
+        <ProjectInformation
+            title="Software for managing people at climbing wall"
+            path="images/mf/"
+            images={[
+                "1.webp",
+                "2.webp",
+                "3.webp",
+                "4.webp",
+                "5.webp",
+                "6.webp",
+            ]}
+            skills={[
+                <HTMLSkillTag />,
+                <CSSSkillTag />,
+                <JSSkillTag />,
+                <SQLSkillTag />,
+                <ElectronSkillTag />
+            ]}
+            
+            direction={dir}
+        >
+            <p>Electron based app for managing people. Build-in keyboard shortcuts to increase work speed.</p>
+        </ProjectInformation>
+    )
+}
+
+export { WOMProject, SMRNDZProject, TailwindColorsProject, ClimbingWallProject }

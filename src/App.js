@@ -8,7 +8,7 @@ import { ShowWhenVisible, visibleVariants } from "./components/ShowWhenVisible";
 import TechGroups from "./components/skills/TechGroups";
 import FancyText from "./components/about/FancyText";
 import WavyText from "./components/about/WavyText";
-import { SMRNDZProject, TailwindColorsProject, WOMProject } from "./components/work/ProjectInformation"
+import { ClimbingWallProject, SMRNDZProject, TailwindColorsProject, WOMProject } from "./components/work/ProjectInformation"
 import FooterBreaker from "./components/footer/FooterBreaker";
 import { LoveSkillTag } from "./components/skills/SkillTag";
 import { FooterEmailLink, FooterGithubLink } from "./components/footer/FooterLink";
@@ -65,8 +65,10 @@ function App() {
           <H2>My projects</H2>
 
           <WOMProject />
-          <SMRNDZProject />
-          <TailwindColorsProject />
+          <SMRNDZProject dir={1} />
+          <ClimbingWallProject />
+          <TailwindColorsProject dir={1} />
+          
         </article>
         <FooterBreaker />
       </section>
