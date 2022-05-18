@@ -5,6 +5,7 @@ const TailwindColorsProject = ({ dir = 0 }) => {
     return (
         <ProjectInformation
             title="Tailwind CSS Colors"
+            date="April 2022"
             path="images/tailwindcolors/"
             images={[
                 "1.webp"

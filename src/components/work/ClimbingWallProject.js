@@ -5,6 +5,7 @@ const ClimbingWallProject = ({dir = 0}) => {
     return (
         <ProjectInformation
             title="Software for wall climbing business"
+            date="July 2021"
             path="images/mf/"
             images={[
                 "1.webp",

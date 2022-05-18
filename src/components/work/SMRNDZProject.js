@@ -5,6 +5,7 @@ const SMRNDZProject = ({dir = 0}) => {
     return (
         <ProjectInformation
             title="Smrekówka and Niedźwiedzia Chata"
+            date="January 2022"
             path="images/smrndz/"
             images={[
                 "1.webp",

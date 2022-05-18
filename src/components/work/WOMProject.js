@@ -5,6 +5,7 @@ const WOMProject = ({dir = 0}) => {
     return (
         <ProjectInformation
             title="Word-o-mat"
+            date="April 2022"
             path="images/wom/"
             images={[
                 "1.webp",

@@ -5,7 +5,6 @@ import React from "react";
 import Breaker from "../Breaker";
 import ImageSlider from "../ImageSlider"
 import { ShowWhenVisible, visibleVariants } from "../ShowWhenVisible";
-import { CSSSkillTag, ElectronSkillTag, FigmaSkillTag, FramerMotionSkillTag, HTMLSkillTag, JSSkillTag, NextSkillTag, PHPSkillTag, ReactSkillTag, SQLSkillTag, TailwindSkillTag } from "../skills/SkillTag";
 
 const ProjectLink = ({ link = null, icon, label }) => {
     if (link === null) return null;
@@ -23,12 +22,13 @@ const ProjectLink = ({ link = null, icon, label }) => {
     );
 }
 
-const ProjectHeader = ({ description, title, externalLink, githubLink, direction }) => {
+const ProjectHeader = ({ description, title, date, externalLink, githubLink, direction }) => {
     const hasLink = externalLink || githubLink;
 
     return (
         <header className={`card max-w-sm lg:max-w-full mb-auto ${direction === 1 ? 'justify-self-end lg:order-2' : ''}`}>
             <h3 className="text-2xl font-bold after:h-px after:inline-block text-center">{title}</h3>
+            <h4 className="text-base text-center">{date}</h4>
             <Breaker />
             <div className="w-full">{description}</div>
 
@@ -70,7 +70,7 @@ const ProjectCard = ({ path, images, skills }) => {
     )
 }
 
-const ProjectInformation = ({ path, images, title, skills = [], children, direction = 0, externalLink, githubLink }) => {
+const ProjectInformation = ({ path, images, title, date, skills = [], children, direction = 0, externalLink, githubLink }) => {
     return (
         <ShowWhenVisible
             variants={visibleVariants.slideUp(50)}
@@ -80,6 +80,7 @@ const ProjectInformation = ({ path, images, title, skills = [], children, direct
                 <ProjectHeader
                     description={children}
                     title={title}
+                    date={date}
                     direction={direction}
                     externalLink={externalLink}
                     githubLink={githubLink}
