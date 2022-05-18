@@ -8,10 +8,13 @@ import { ShowWhenVisible, visibleVariants } from "./components/ShowWhenVisible";
 import TechGroups from "./components/skills/TechGroups";
 import FancyText from "./components/about/FancyText";
 import WavyText from "./components/about/WavyText";
-import { ClimbingWallProject, SMRNDZProject, TailwindColorsProject, WOMProject } from "./components/work/ProjectInformation"
 import FooterBreaker from "./components/footer/FooterBreaker";
 import { LoveSkillTag } from "./components/skills/SkillTag";
 import { FooterEmailLink, FooterGithubLink } from "./components/footer/FooterLink";
+import WOMProject from "./components/work/WOMProject"
+import SMRNDZProject from "./components/work/SMRNDZProject"
+import ClimbingWallProject from "./components/work/ClimbingWallProject"
+import TailwindColorsProject from "./components/work/TailwindColorsProject"
 
 function App() {
   return (
@@ -68,7 +71,7 @@ function App() {
           <SMRNDZProject dir={1} />
           <ClimbingWallProject />
           <TailwindColorsProject dir={1} />
-          
+
         </article>
         <FooterBreaker />
       </section>
@@ -91,7 +94,7 @@ function App() {
             <span className="flex gap-3 justify-center items-center mb-5">Made with<LoveSkillTag /></span>
             <span className="text-sm">Designed by Marcin Gąsienica-Makowski | 2022</span>
           </ShowWhenVisible>
-          
+
         </article>
       </footer>
 
