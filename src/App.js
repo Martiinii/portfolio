@@ -15,6 +15,7 @@ import WOMProject from "./components/work/WOMProject"
 import SMRNDZProject from "./components/work/SMRNDZProject"
 import ClimbingWallProject from "./components/work/ClimbingWallProject"
 import TailwindColorsProject from "./components/work/TailwindColorsProject"
+import { motion } from "framer-motion";
 
 function App() {
   return (
@@ -26,8 +27,8 @@ function App() {
         <ScrollDownArrow />
       </section>
 
-      <section className="bg-secondary min-h-screen" id="about">
-        <article className="max-w-4xl mx-auto">
+      <section className="bg-secondary min-h-screen flex flex-col md:flex-row gap-5" id="about">
+        <article className="max-w-4xl mx-auto shrink-[2]">
           <H2>About me</H2>
 
           <ShowWhenVisible delay={.5} variants={visibleVariants.slideRight(80)} type="spring" duration={1.5}>
@@ -44,6 +45,16 @@ function App() {
             <p>My interests are astronomy, rockets, astrophotography, Rubik's cubes and yoyos.</p>
           </ShowWhenVisible>
         </article>
+
+        <ShowWhenVisible delay={1.5} variants={visibleVariants.slideLeft(80)} className="mx-auto my-auto">
+          <motion.img
+            className="rounded-xl max-h-[90vh] shadow-lg shadow-black/30"
+            src="images/photos/IMG_5451.webp"
+            alt="Martin"
+            whileHover={{scale: 1.05, rotateZ: "2deg"}}
+            whileTap={{scale: 1.05, rotateZ: "2deg"}}
+          />
+        </ShowWhenVisible>
       </section>
 
       <section className="bg-primary min-h-screen" id="skills">
