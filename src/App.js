@@ -38,7 +38,7 @@ function App() {
 
           <ShowWhenVisible delay={1.1} variants={visibleVariants.slideRight(80)} type="spring" duration={1.5}>
             <p>I&nbsp;am eager to learn new technologies and I&nbsp;willingly study new topics that interest me. I&nbsp;can spend hours upon new things, thoroughly analyzing how they work under the hood. I&nbsp;pay a lot of attention to optimizing and organizing the code.</p>
-            <p>My interests are astronomy, rockets, astrophotography and Rubik's cubes.</p>
+            <p>My interests are astronomy, rockets, astrophotography, Rubik's cubes and yoyos.</p>
           </ShowWhenVisible>
         </article>
       </section>
