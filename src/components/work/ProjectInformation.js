@@ -176,7 +176,7 @@ const TailwindColorsProject = ({dir = 0}) => {
 const ClimbingWallProject = ({dir = 0}) => {
     return (
         <ProjectInformation
-            title="Software for managing people at climbing wall"
+            title="Software for wall climbing business"
             path="images/mf/"
             images={[
                 "1.webp",
