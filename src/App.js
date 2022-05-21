@@ -27,7 +27,7 @@ function App() {
         <ScrollDownArrow />
       </section>
 
-      <section className="bg-secondary min-h-screen flex flex-col md:flex-row gap-5" id="about">
+      <section className="bg-secondary min-h-screen flex flex-col md:flex-row gap-5 overflow-x-hidden" id="about">
         <article className="max-w-4xl mx-auto shrink-[2]">
           <H2>About me</H2>
 
@@ -51,8 +51,8 @@ function App() {
             className="rounded-xl max-h-[90vh] shadow-lg shadow-black/30"
             src="images/photos/IMG_5451.webp"
             alt="Martin"
-            whileHover={{scale: 1.05, rotateZ: "2deg"}}
-            whileTap={{scale: 1.05, rotateZ: "2deg"}}
+            whileHover={{scale: 1.03, rotateZ: "1deg"}}
+            whileTap={{scale: 1.03, rotateZ: "1deg"}}
           />
         </ShowWhenVisible>
       </section>
