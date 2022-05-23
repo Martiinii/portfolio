@@ -16,6 +16,7 @@ import SMRNDZProject from "./components/work/SMRNDZProject"
 import ClimbingWallProject from "./components/work/ClimbingWallProject"
 import TailwindColorsProject from "./components/work/TailwindColorsProject"
 import { motion } from "framer-motion";
+import ELibraryProject from "./components/work/ELibraryProject";
 
 function App() {
   return (
@@ -51,8 +52,8 @@ function App() {
             className="rounded-xl max-h-[90vh] shadow-lg shadow-black/30"
             src="images/photos/IMG_5451.webp"
             alt="Martin"
-            whileHover={{scale: 1.03, rotateZ: "1deg"}}
-            whileTap={{scale: 1.03, rotateZ: "1deg"}}
+            whileHover={{ scale: 1.03, rotateZ: "1deg" }}
+            whileTap={{ scale: 1.03, rotateZ: "1deg" }}
           />
         </ShowWhenVisible>
       </section>
@@ -79,9 +80,10 @@ function App() {
           <H2>My projects</H2>
 
           <WOMProject />
-          <SMRNDZProject dir={1} />
-          <ClimbingWallProject />
-          <TailwindColorsProject dir={1} />
+          <ELibraryProject dir={1} />
+          <SMRNDZProject />
+          <ClimbingWallProject dir={1} />
+          <TailwindColorsProject />
 
         </article>
         <FooterBreaker />
