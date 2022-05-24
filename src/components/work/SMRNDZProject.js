@@ -21,6 +21,8 @@ const SMRNDZProject = ({dir = 0}) => {
                 <PHPSkillTag />,
                 <SQLSkillTag />,
             ]}
+            externalLink="https://www.martini.zakopa.net/smrekowka/"
+
             direction={dir}
         >
             <p>Website with information about two houses for rent. Includes an easy-to-use booking system with administration panel to manage reservations.</p>
