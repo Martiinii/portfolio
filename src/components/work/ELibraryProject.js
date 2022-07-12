@@ -24,7 +24,7 @@ const ELibraryProject = ({dir = 0}) => {
             direction={dir}
         >
             <p>Web application for searching and reading books from <a className="link" href="https://www.gutenberg.org">Project Gutenberg</a>.</p>
-            <p>Books can be added to favorites and to read them later. Included search bar with filters.</p>
+            <p>Books can be saved for later reading. Included search bar with filters.</p>
         </ProjectInformation>
     )
 }
